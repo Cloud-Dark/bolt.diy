@@ -34,26 +34,26 @@ const StarterTemplates: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4">
-      {/* Input dan tombol */}
-      <div className="flex flex-col items-center gap-2">
+    <div className="flex flex-col items-center gap-6">
+      {/* Row input dan button */}
+      <div className="flex items-center gap-2 w-full justify-center">
         <input
           type="text"
-          placeholder="Enter GitHub Public repo URL (e.g. https://github.com/user/repo.git)"
+          placeholder="https://github.com/user/repo.git"
           value={customUrl}
           onChange={(e) => setCustomUrl(e.target.value)}
-          className="border border-gray-300 rounded px-3 py-2 w-80 text-sm"
+          className="border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded px-4 py-2 w-80 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
         <button
           onClick={handleSubmit}
-          className="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600 transition"
+          className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded text-sm transition"
         >
           Use this template
         </button>
       </div>
 
-      {/* Teks dan template bawaan */}
-      <span className="text-sm text-gray-500">
+      {/* Tulisan dan template list */}
+      <span className="text-sm text-gray-500 dark:text-gray-400">
         or start a blank app with your favorite stack
       </span>
       <div className="flex justify-center">
